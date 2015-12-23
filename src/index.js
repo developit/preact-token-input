@@ -45,6 +45,7 @@ export default class TokenInput extends Component {
 	}
 
 	handleEvent({ type, target }) {
+		if (type==='change') this.handleEvent({ type:'input', target });
 		let value = this.getValue();
 		for (let i in this.props) {
 			if (this.props.hasOwnProperty(i) && i.toLowerCase()===`on${type}`) {
