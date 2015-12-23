@@ -5,6 +5,8 @@ import 'tags-input/tags-input.css';
 const CLASS_NAME = 'token-input';
 
 export default class TokenInput extends Component {
+	nodeName = 'token-input';
+
 	shouldComponentUpdate() {
 		return false;
 	}
