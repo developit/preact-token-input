@@ -1,7 +1,7 @@
 {
   "name": "preact-token-input",
   "amdName": "preactTokenInput",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A text field that tokenizes input, for things like tags.",
   "main": "dist/preact-token-input.js",
   "scripts": {
