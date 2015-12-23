@@ -20,7 +20,9 @@ export default {
 		babel({
 			babelrc: false,
 			exclude: 'node_modules/**',
+			presets: ['es2015-rollup'],
 			plugins: [
+				['babel-plugin-transform-es2015-classes', { loose:true }],
 				['transform-react-jsx', { pragma: 'h' }]
 			]
 		}),
