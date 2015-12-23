@@ -4,6 +4,7 @@ import babel from 'rollup-plugin-babel';
 import npm from 'rollup-plugin-npm';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
+import discardComments from 'postcss-discard-comments';
 
 let pkg = JSON.parse(fs.readFileSync('./package.json'));
 
@@ -37,7 +38,10 @@ export default {
 			exclude: '**/*.css'
 		}),
 		postcss({
-			inline: true
+			inline: true,
+			plugins: [
+				discardComments({ removeAll: true })
+			]
 		})
 	]
 };

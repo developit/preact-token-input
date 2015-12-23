@@ -56,6 +56,7 @@
     "eslint": "^1.10.3",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.3",
+    "postcss-discard-comments": "^2.0.2",
     "preact": "^2.6.1",
     "preact-jsx-chai": "^1.0.0",
     "rollup": "^0.22.0",
