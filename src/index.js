@@ -5,8 +5,6 @@ import 'tags-input/tags-input.css';
 const CLASS_NAME = 'token-input';
 
 export default class TokenInput extends Component {
-	nodeName = 'token-input';
-
 	shouldComponentUpdate() {
 		return false;
 	}
@@ -46,11 +44,11 @@ export default class TokenInput extends Component {
 		}
 	}
 
-	handleEvent({ type }) {
+	handleEvent({ type, target }) {
 		let value = this.getValue();
 		for (let i in this.props) {
 			if (this.props.hasOwnProperty(i) && i.toLowerCase()===`on${type}`) {
-				this.props[i]({ type, value, target:this });
+				this.props[i]({ type, value, target, currentTarget:this });
 			}
 		}
 	}
