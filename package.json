@@ -63,7 +63,7 @@
     "rollup-plugin-babel": "^2.2.0",
     "rollup-plugin-commonjs": "^1.4.0",
     "rollup-plugin-npm": "^1.1.0",
-    "rollup-plugin-postcss": "0.0.24",
+    "rollup-plugin-postcss": "0.0.27",
     "sinon": "^1.17.1",
     "sinon-chai": "^2.8.0"
   },

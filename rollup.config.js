@@ -13,7 +13,7 @@ let external = Object.keys(pkg.peerDependencies || {}).concat(Object.keys(pkg.de
 export default {
 	entry: 'src/index.js',
 	dest: pkg.main,
-	// sourceMap: path.resolve(pkg.main),
+	sourceMap: path.resolve(pkg.main),
 	moduleName: pkg.amdName,
 	format: 'umd',
 	external,
@@ -38,7 +38,6 @@ export default {
 			exclude: '**/*.css'
 		}),
 		postcss({
-			inline: true,
 			plugins: [
 				discardComments({ removeAll: true })
 			]
