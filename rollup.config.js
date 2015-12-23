@@ -7,7 +7,7 @@ import postcss from 'rollup-plugin-postcss';
 
 let pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-let external = Object.keys(pkg.peerDependencies);
+let external = Object.keys(pkg.peerDependencies || {}).concat(Object.keys(pkg.dependencies || {}));
 
 export default {
 	entry: 'src/index.js',
@@ -19,6 +19,7 @@ export default {
 	plugins: [
 		babel({
 			babelrc: false,
+			comments: false,
 			exclude: 'node_modules/**',
 			presets: ['es2015-rollup'],
 			plugins: [
@@ -32,8 +33,11 @@ export default {
 			skip: external
 		}),
 		commonjs({
+			include: 'node_modules/**',
 			exclude: '**/*.css'
 		}),
-		postcss()
+		postcss({
+			inline: true
+		})
 	]
 };

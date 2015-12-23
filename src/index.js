@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import tagsInput from 'tags-input';
-import 'tags-input/tags-input.css';
+import '../node_modules/tags-input/tags-input.css';
 
 const CLASS_NAME = 'token-input';
 
