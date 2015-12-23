@@ -22,6 +22,7 @@ export default {
 			exclude: 'node_modules/**',
 			presets: ['es2015-rollup'],
 			plugins: [
+				'transform-class-properties',
 				['babel-plugin-transform-es2015-classes', { loose:true }],
 				['transform-react-jsx', { pragma: 'h' }]
 			]
