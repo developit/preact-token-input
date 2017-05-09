@@ -1,5 +1,7 @@
 # preact-token-input
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developit/preact-token-input.svg)](https://greenkeeper.io/)
+
 [![NPM](http://img.shields.io/npm/v/preact-token-input.svg)](https://www.npmjs.com/package/preact-token-input)
 [![travis-ci](https://travis-ci.org/developit/preact-token-input.svg)](https://travis-ci.org/developit/preact-token-input)
 
