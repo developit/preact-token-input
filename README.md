@@ -23,7 +23,7 @@ const Tags = ({ tags, ...props }) => (
 	<label class="tags">
 		Add some tags:
 		<TokenInput value={tags} {...props} />
-	</form>
+	</label>
 );
 
 let tags = ['new', 'noteworthy', 'tech'];
